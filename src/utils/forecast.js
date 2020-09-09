@@ -11,12 +11,19 @@ const forecast = (lat, lon, callback) => {
 			callback('unable to find loacation. Try another search', undefined);
 		} else {
 			callback(undefined, {
-				temp: body.main.temp,
-				feelsLike: body.main.feels_like,
-				tempMin: body.main.temp_min,
-				tempMax: body.main.temp_max,
-				humidity: body.main.humidity,
-				name: body.name,
+				// temp: body.main.temp,
+				// feelsLike: body.main.feels_like,
+				// tempMin: body.main.temp_min,
+				// tempMax: body.main.temp_max,
+				// humidity: body.main.humidity,
+				// name: body.name,
+
+				message: `temp: ${body.main.temp} 
+				feelsLike:${body.main.feels_like}
+				tempMin: ${body.main.temp_min}
+				tempMax: ${body.main.temp_max}
+				humidity: ${body.main.humidity}
+				name: ${body.name}`,
 			});
 		}
 	});
